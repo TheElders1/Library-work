@@ -10,10 +10,10 @@ export default function Services() {
       <Section key={g.title} title={g.title} tone={i % 2 ? "paper" : "white"}>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {g.items.map(s => (
-            <article key={s.name} className="rounded-md border border-slate-200 bg-white p-6">
-              <Icon name={s.icon} className="h-7 w-7 text-gold" />
+            <article key={s.name} className="card p-7">
+              <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-navy"><Icon name={s.icon} className="h-6 w-6 text-gold-soft" /></span>
               <h3 className="mt-4 font-serif text-xl text-navy">{s.name}</h3>
-              <p className="mt-2 text-slate-600">{s.desc}</p>
+              <p className="mt-2 leading-relaxed text-slate-700">{s.desc}</p>
             </article>))}
         </div>
       </Section>))}

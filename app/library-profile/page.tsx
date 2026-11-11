@@ -11,10 +11,10 @@ export default function Profile() {
       <p className="mb-8 max-w-3xl font-serif text-lg">{MISSION_INTRO}</p>
       <ol className="grid gap-5 md:grid-cols-2">
         {missions.map((m, i) => (
-          <li key={m.title} className="rounded-md border border-slate-200 bg-white p-6">
-            <span className="font-serif text-3xl text-gold">{i + 1}</span>
+          <li key={m.title} className="card p-7">
+            <span className="font-serif text-4xl text-gold">{i + 1}</span>
             <h3 className="mt-2 font-serif text-xl text-navy">{m.title}</h3>
-            <p className="mt-2 text-slate-600">{m.text}</p>
+            <p className="mt-2 leading-relaxed text-slate-700">{m.text}</p>
           </li>))}
       </ol>
     </Section>
