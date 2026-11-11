@@ -1,0 +1,9 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { scroll-behavior: smooth; }
+body { @apply bg-white text-slate-800 font-sans antialiased; }
+:focus-visible { outline: 2px solid #B8955A; outline-offset: 2px; }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.hero-rise > * { animation: rise .7s ease both; }
+.hero-rise > *:nth-child(2) { animation-delay: .12s; } .hero-rise > *:nth-child(3) { animation-delay: .24s; } .hero-rise > *:nth-child(4) { animation-delay: .36s; }
+.spines { background-image: repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 2px, transparent 2px 26px, rgba(184,149,90,.14) 26px 29px, transparent 29px 71px); }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
