@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, Library } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { nav } from "@/lib/config";
 
 export default function Header() {
@@ -12,7 +12,8 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="flex h-10 w-10 items-center justify-center rounded bg-navy text-gold" aria-label="Logo placeholder"><Library className="h-5 w-5" /></span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.jpg" alt="Madonna University crest" width={48} height={48} className="h-12 w-12 rounded-full object-cover" />
           <span className="leading-tight"><span className="block font-serif text-lg text-navy">Madonna University Library</span><span className="block text-xs text-slate-500">Okija Campus</span></span>
         </Link>
         <nav className="hidden md:flex gap-1" aria-label="Main">
